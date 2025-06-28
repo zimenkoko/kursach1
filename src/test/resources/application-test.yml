@@ -1,0 +1,12 @@
+spring:
+  liquibase:
+    enabled: false
+  sql:
+    init:
+      mode: always
+      schema-locations: classpath:schema-test.sql
+  datasource:
+    url: jdbc:postgresql://localhost:5432/pharmacy_warehouse
+    username: postgres
+    password: 1706
+    driver-class-name: org.postgresql.Driver

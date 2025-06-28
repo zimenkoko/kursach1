@@ -1,0 +1,27 @@
+databaseChangeLog:
+  - changeSet:
+      id: 3
+      author: pharmacy
+      changes:
+        - createSequence:
+            sequenceName: user_seq
+            startValue: 1
+
+        - createTable:
+            tableName: users
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: username
+                  type: varchar(255)
+              - column:
+                  name: password
+                  type: varchar(255)
+              - column:
+                  name: role
+                  type: varchar(255)
